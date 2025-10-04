@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Counter App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <h2>
+                <i class="fas fa-pen-fancy"></i>
+                Text Counter
+            </h2>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <textarea id="text-input" placeholder="Start typing your text here..."></textarea>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-font"></i>
+                <div class="stat-label">Words</div>
+                <div class="stat-value" id="word-count">0</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-text-width"></i>
+                <div class="stat-label">Characters</div>
+                <div class="stat-value" id="char-count">0</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-align-left"></i>
+                <div class="stat-label">Sentences</div>
+                <div class="stat-value" id="sentence-count">0</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <div class="stat-label">Read Time</div>
+                <div class="stat-value" id="read-time">0m</div>
+            </div>
+        </div>
+
+        <button class="clear-btn" id="clear-btn">
+            <i class="fas fa-trash-alt"></i>
+            Clear Text
+        </button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
